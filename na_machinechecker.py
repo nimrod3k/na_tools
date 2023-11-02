@@ -54,3 +54,4 @@ if __name__ == "__main__":
         checksokobanmachines(sys.argv[1])
     else:
         print('Format is na_machinechecker.py <filename>')
+    input("application finished running press ENTER to close")
