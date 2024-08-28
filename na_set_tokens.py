@@ -1,5 +1,4 @@
 import sys
-from areainfo import areainfo
 allsokenbangames = []
 letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"]
 n = 0
@@ -37,8 +36,11 @@ def na_set_tokens(filename, newvalue):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        na_set_tokens(sys.argv[1], sys.argv[2])
-    else:
-        print('Format is na_machinechecker.py <filename>')
+    try:
+        if len(sys.argv) > 1:
+            na_set_tokens(sys.argv[1], sys.argv[2])
+        else:
+            print('Format is na_set_tokens <filename> <token value>')
+    except:
+         print('Error Running program Correct format is na_set_tokens <filename> <token value>')
     input("application finished running press ENTER to close")
